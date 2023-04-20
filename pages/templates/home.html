@@ -1,9 +1,11 @@
 <!-- templates/home.html -->
 {% extends '_base.html' %}
-
+{% load static %}
 {% block title %} Home {% endblock title%}
 {% block content %}
     <h1>Homepage</h1>
+    <h1> Homepage </h1>
+    <img class="sea" src="{% static 'images/fp.jpg'%}">
 {% if user.is_authenticated %}
     Hi {{ user.email }}!
     <p> <a href="{% url 'logout' %}"> Log out </a> </p>
